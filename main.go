@@ -20,7 +20,7 @@ type IError struct {
 var Validator = validator.New()
 
 func ValidateAddDog(c *fiber.Ctx) error {
-	var errors []*IError
+    var errors []*IError
     body := new(Dog)
     c.BodyParser(&body)
 
