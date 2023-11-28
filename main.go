@@ -24,7 +24,7 @@ func ValidateAddDog(c *fiber.Ctx) error {
     body := new(Dog)
     c.BodyParser(&body)
 
-	err := Validator.Struct(body)
+    err := Validator.Struct(body)
     if err != nil {
         for _, err := range err.(validator.ValidationErrors) {
             var el IError
